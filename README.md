@@ -3,7 +3,7 @@
 ### Do a program that:
 
 1. Can load any registers quantity
-2. Use pront() as input data
+2. Use prompt() as input data
 3. Compare ages and look for the oldest person
 4. Show the array content in the console browser
 5. Show the oldest person in the console browser
