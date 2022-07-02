@@ -10,7 +10,7 @@
 
 **The following image shows the way to finish the loop loading people data pressing Cancel botton or ESC key**
 
-![First: FOR cicle. After: While cicle, both counting from 1 to 20](![nameBlankToFinish.jpg](https://github.com/JLbr2022/JS-ejercicioAula08/blob/Import-Export-functions/img/AskingForAdd.jpg?raw=true)
+![enter image description here]((https://github.com/JLbr2022/JS-ejercicioAula08/blob/Import-Export-functions/img/AskingForAdd.jpg?raw=true)
 
 **The following image shows how to enter a name person in the windows**
 
