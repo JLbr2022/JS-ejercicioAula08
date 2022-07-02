@@ -11,10 +11,15 @@
  * objects to store all the data person.
  */
 
-// Importando archivo de funciones
-import("./functions.js");
+// Importing functions from functions.js file
+import {
+  PersonRegister,
+  showData,
+  calcOldPerson,
+  showOldestPerson,
+} from "../js/functions.js";
 
-// declaración de variables
+// Declaring variables
 
 var followNext = true;
 var continuar = true;
@@ -22,16 +27,15 @@ var nName = String;
 var nAge = Number;
 var i = 0;
 var person = [];
-var oldPersonTemp = 0;
 
 while (followNext) {
-  // Validación y carga de registro de persona
+  // Validation and loading registers
   continuar = confirm("¿Desea agregar otra persona?");
 
   if (continuar) {
     nName[i] = prompt("Ingrese nombre");
     nAge[i] = prompt("Ingrese edad");
-    addDataPerson(nName[i], nAge[i]);
+    person[i] = new PersonRegister(nName[i], nAge[i]);
     i++;
   } else {
     followNext = false;
@@ -39,6 +43,8 @@ while (followNext) {
   }
 }
 
-oldPerson(); // llamado de función que calcula la persona con mayor edad
-mostrarData(); // llamado de función para personas cargadas en el array
-showOldestPerson(oldPersonTemp); // llamado de función que muestra la persona con mayor edad
+showData(person, i); // Calling function to show array data
+let oldPerson = calcOldPerson(person, i); // Calling function which calc the oldest person in the array
+if (i > 0) {
+  showOldestPerson(oldPerson); // Calling function which shows the oldest person in the array
+}
