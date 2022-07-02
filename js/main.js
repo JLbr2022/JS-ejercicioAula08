@@ -1,8 +1,11 @@
 /*
  * JavaScript program which ask for a person data and shows the oldest person in the list.
  * Using statements:
+ * import/export
  * functions,
+ * Constructor Function,
  * console.table(),
+ * console.log()
  * alert(),
  * prompt(),
  * for and while loops,
@@ -29,7 +32,7 @@ var i = 0;
 var person = [];
 
 while (followNext) {
-  // Validation and loading registers
+  // Validating to continue loading regs and loading registers routing
   continuar = confirm("¿Desea agregar otra persona?");
 
   if (continuar) {
@@ -45,6 +48,8 @@ while (followNext) {
 
 showData(person, i); // Calling function to show array data
 let oldPerson = calcOldPerson(person, i); // Calling function which calc the oldest person in the array
+
+// If any register was entered won't show the oldest person
 if (i > 0) {
   showOldestPerson(oldPerson); // Calling function which shows the oldest person in the array
 }

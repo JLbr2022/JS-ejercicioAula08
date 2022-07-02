@@ -12,7 +12,7 @@ export function showData(fperson, fi) {
     for (let fi = 0; fi < fperson.length; fi++) {
       console.table(fperson[fi]);
     }
-    return; //fperson[fi];
+    return;
   } else {
     alert("No hay datos para mostrar");
   }
