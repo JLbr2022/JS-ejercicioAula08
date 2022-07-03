@@ -9,18 +9,18 @@
  * alert(),
  * prompt(),
  * for and while loops,
- * array,
+ * array, sort(),
  * if/else statments,
  * objects to store all the data person.
  */
 
 // Importing functions from functions.js file
+
 import {
   PersonRegister,
   showData,
   calcOldPerson,
   showOldestPerson,
-  // sortByAge,
 } from "../js/functions.js";
 
 // Declaring variables
@@ -47,8 +47,11 @@ while (followNext) {
   }
 }
 
-let oldPerson = calcOldPerson(person); // Calling function which calc the oldest person in the array
-showData(person, i); // Calling function to show array data
+// Calling function which calc the oldest person in the array
+let oldPerson = calcOldPerson(person);
 
-// If any register was entered won't show the oldest person
-showOldestPerson(oldPerson, i); // Calling function which shows the oldest person in the array
+// Calling function to show array data
+showData(person, i);
+
+// Calling function which shows the oldest person in the array
+showOldestPerson(oldPerson, i);
