@@ -7,12 +7,9 @@ export function PersonRegister(fName, fAge) {
 }
 
 // Function to show array registers in table format in the console
-export function showData(fperson, fi) {
+export function showData(fPerson, fi) {
   if (fi > 0) {
-    for (let fi = 0; fi < fperson.length; fi++) {
-      console.table(fperson[fi]);
-    }
-    return;
+    fPerson.forEach((element) => console.table(element));
   } else {
     alert("No hay datos para mostrar");
   }
