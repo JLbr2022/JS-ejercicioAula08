@@ -2,7 +2,7 @@
  * JavaScript program which ask for a person data and shows the oldest person in the list.
  * Using statements:
  * import/export
- * functions,
+ * functions, arrow functions
  * Constructor Function,
  * console.table(),
  * console.log()
