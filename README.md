@@ -3,9 +3,9 @@
 ### Hacer un programa en JS que:
 
 1. Reciba permita cargar "n" cantidad de registros (nombre, edad)
-2. Utilizar prompt para recibir los datos
-3. Comparar las edades y encontrar la mayor edad
-4. En la cónsola del browser, mostrar todas las personas con su edad
+2. Utilizar prompt para recibir los datos.
+3. Comparar las edades y encontrar la mayor edad.
+4. En la cónsola del browser, mostrar todas las personas con su edad.
 5. En la consola del navegador, mostrar la persona con la mayor edad y su edad.
 
 **The following image shows the way to finish the loop loading people data leaving field nName in blank**
