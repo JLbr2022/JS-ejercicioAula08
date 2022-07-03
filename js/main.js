@@ -20,6 +20,7 @@ import {
   showData,
   calcOldPerson,
   showOldestPerson,
+  // sortByAge,
 } from "../js/functions.js";
 
 // Declaring variables
@@ -37,7 +38,7 @@ while (followNext) {
 
   if (continuar) {
     nName[i] = prompt("Ingrese nombre");
-    nAge[i] = prompt("Ingrese edad");
+    nAge[i] = Number(prompt("Ingrese edad"));
     person[i] = new PersonRegister(nName[i], nAge[i]);
     i++;
   } else {
@@ -46,10 +47,8 @@ while (followNext) {
   }
 }
 
+let oldPerson = calcOldPerson(person); // Calling function which calc the oldest person in the array
 showData(person, i); // Calling function to show array data
-let oldPerson = calcOldPerson(person, i); // Calling function which calc the oldest person in the array
 
 // If any register was entered won't show the oldest person
-if (i > 0) {
-  showOldestPerson(oldPerson); // Calling function which shows the oldest person in the array
-}
+showOldestPerson(oldPerson, i); // Calling function which shows the oldest person in the array

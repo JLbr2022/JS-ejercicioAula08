@@ -18,25 +18,24 @@ export function showData(fperson, fi) {
   }
 }
 
-// Fuction which calc the oldest person in the array
-export function calcOldPerson(fPerson, fi) {
-  var oldPerson = 0;
-  for (let fi = 0; fi < fPerson.length; fi++) {
-    if (fPerson[fi].nAge > oldPerson) {
-      oldPerson = fPerson[fi];
-      console.log(oldPerson);
-    }
-  }
-  return oldPerson; //oldPerson;
+// Function to sort the array ascending way by age  order and take the oldest person
+export function calcOldPerson(fPerson) {
+  fPerson.sort(function (a, b) {
+    return a.nAge - b.nAge;
+  });
+  let oldPerson = fPerson[fPerson.length - 1];
+  return oldPerson;
 }
 
 // Function which shows the oldest person in the array in the console browser
-export function showOldestPerson(fOldPersonTemp) {
-  console.log(
-    "La persona con mayor edad es: " +
-      fOldPersonTemp.nName +
-      " con " +
-      fOldPersonTemp.nAge +
-      " años"
-  );
+export function showOldestPerson(fOldPersonTemp, fi) {
+  if (fi > 0) {
+    console.log(
+      "La persona con mayor edad es: " +
+        fOldPersonTemp.nName +
+        " con " +
+        fOldPersonTemp.nAge +
+        " años"
+    );
+  }
 }
