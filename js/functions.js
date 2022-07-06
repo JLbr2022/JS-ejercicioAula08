@@ -1,9 +1,18 @@
 // == [ FUNCTIONS ] ==
 
-// Contruct Function that load person data and add them to the Object persona
+// Contruct Function that load person data and add them to the Object person
 export function PersonRegister(fName, fAge) {
   this.nName = fName;
   this.nAge = fAge;
+}
+
+// Function to sort the array ascending way by age order and take the last value in the array
+export function calcHighestValue(xArray) {
+  xArray.sort(function (a, b) {
+    return a.nAge - b.nAge; // sort and return the array highest value
+  });
+  let highValue = xArray[xArray.length - 1];
+  return highValue;
 }
 
 // Function to show array registers in table format in the console
@@ -15,24 +24,17 @@ export function showData(fPerson, fi) {
   }
 }
 
-// Function to sort the array ascending way by age  order and take the oldest person
-export function calcOldPerson(fPerson) {
-  fPerson.sort(function (a, b) {
-    return a.nAge - b.nAge;
-  });
-  let oldPerson = fPerson[fPerson.length - 1];
-  return oldPerson;
-}
-
 // Function which shows the oldest person in the array in the console browser
 export function showOldestPerson(fOldPersonTemp, fi) {
   if (fi > 0) {
-    console.log(
-      "La persona con mayor edad es: " +
-        fOldPersonTemp.nName +
-        " con " +
-        fOldPersonTemp.nAge +
-        " años"
-    );
+    for (let i = 0; i < fOldPersonTemp.length; i++) {
+      console.table(
+        "Persona con mayor edad es: " +
+          fOldPersonTemp.nName +
+          " con " +
+          fOldPersonTemp.nAge +
+          " años"
+      );
+    }
   }
 }

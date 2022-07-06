@@ -19,7 +19,7 @@
 import {
   PersonRegister,
   showData,
-  calcOldPerson,
+  calcHighestValue,
   showOldestPerson,
 } from "../js/functions.js";
 
@@ -33,7 +33,7 @@ var i = 0;
 var person = [];
 
 while (followNext) {
-  // Validating to continue loading regs and loading registers routing
+  // Validating to continue loading regs and call the Constructor Function PersonRegister()
   continuar = confirm("¿Desea agregar otra persona?");
 
   if (continuar) {
@@ -47,11 +47,14 @@ while (followNext) {
   }
 }
 
-// Calling function which calc the oldest person in the array
-let oldPerson = calcOldPerson(person);
+// Calling function which sort in ascending way and take the last value in the array
+let highValue = calcHighestValue(person);
+
+// Arrow function which  calc the oldest persons in the array
+const result = person.filter((element) => element.nAge == highValue.nAge);
 
 // Calling function to show array data
 showData(person, i);
 
 // Calling function which shows the oldest person in the array
-showOldestPerson(oldPerson, i);
+showOldestPerson(highValue, i);
